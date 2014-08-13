@@ -1,4 +1,10 @@
 Yellowstore::Application.routes.draw do
+  get "pages/sexyhair"
+  get "pages/macadamia"
+  get "pages/bosley"
+  get "pages/home"
+  get "pages/contacts"
+  get "pages/partners"
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

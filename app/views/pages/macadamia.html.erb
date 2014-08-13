@@ -1,0 +1,4 @@
+<h1>Pages#macadamia</h1>
+<p>Find me in app/views/pages/macadamia.html.erb</p>
+<% @products.each do |product| %> <div class="entry"> <%= image_tag(product.image_url) %> <h3><%= product.title %></h3> <%= sanitize(product.description) %> <div class="price_line"> <span class="price"><%= product.price %></span> </div> 
+<div class="price_line"> <span class="price"><%= product.category %></span> </div> </div> <% end %> 
