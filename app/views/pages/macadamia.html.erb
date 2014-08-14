@@ -1,4 +1,27 @@
-<h1>Pages#macadamia</h1>
-<p>Find me in app/views/pages/macadamia.html.erb</p>
-<% @products.each do |product| %> <div class="entry"> <%= image_tag(product.image_url) %> <h3><%= product.title %></h3> <%= sanitize(product.description) %> <div class="price_line"> <span class="price"><%= product.price %></span> </div> 
-<div class="price_line"> <span class="price"><%= product.category %></span> </div> </div> <% end %> 
+<div class="main">
+	 <div class="wrap">
+		<div class="products">
+			 <div class="top-box">
+				<h2><%= image_tag("macadamia.png", :alt => "") %></h2>
+				<hr>
+			 </div>
+			 <div class="padd">
+                <div class="row">
+                    <div class="span6 offset3">
+                        <h4 class="head" style="text-align: center;">Профессиональная косметика для домашнего и салонного ухода. Вся продукция компании Macadamia Natural Oil содержит два самых дорогих и эффективных масла: Арганы и Макадамии и позиционируется, как профессиональный SPA-уход за волосами. Macadamia Natural Oil представлена более чем в 60 странах мира.</h4>
+                    </div>
+                    <div class="clearfix"></div>
+                 </div>
+            </div>
+		    <div class="padd">
+				<% @products.each do |product| %> <div class="col_1_of_1 span_1_of_1">
+					<div class="list-box"><div class="grid_img"> <%= image_tag(product.image_url, :class => "product_image") %> </div><h4><%= product.title %></h4> <p class='txt1'>
+					<%= sanitize(product.description) %></p><p class='txt2'>Применение:<br><%= sanitize(product.description2) %></p> <div class="price_line"> 
+					<span class="price"><%= product.price %></span> </div> <% end %>
+				</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	 </div>
+	</div>

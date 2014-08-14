@@ -1,10 +1,10 @@
 Yellowstore::Application.routes.draw do
-  get "pages/sexyhair"
-  get "pages/macadamia"
-  get "pages/bosley"
-  get "pages/home"
-  get "pages/contacts"
-  get "pages/partners"
+  root  'pages#home'
+  match '/sexyhair', to: 'pages#sexyhair', via: 'get'
+  match '/macadamia', to: 'pages#macadamia', via: 'get'
+  match '/bosley', to: 'pages#bosley', via: 'get'
+  match '/contacts', to: 'pages#contacts', via: 'get'
+  match '/partners', to: 'pages#partners', via: 'get'
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

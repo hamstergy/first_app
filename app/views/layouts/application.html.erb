@@ -7,8 +7,62 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_page?(root_url)%>
+<% else %>
+<div class="header">	
+  <div class="wrap"> 
+	<div class="header-top">
+		 <div class="logo">
+			 <h1><%= link_to "/" do %><%= image_tag("yellowlogo.png", :alt => "Вернуться на главную") %><% end %></h1>
+		 </div>
+	    <div id="text-6" class="visible-all-devices header-text ">			
+	    	<div class="textwidget">Lorem ipsum dolor,<br>
+				diam nonummy nibh.<br>
+				<br>
+				nostrud exerci tation ullamcorper <br>
+				<h5 class="phone">+1 800 253 2560</h5></div>
+		</div>
+		 <div class="clear"></div> 
+	   </div>
+   </div>	
+</div>
+<% end %>
+      <!------ Slider ------------>
+   <div class="banner">
+      <div class="wrap">
+		   <div class="cssmenu">
+				<ul>
+				   <li class="<%= 'active' if current_page?(partners_path) %>">
+					<%= link_to "partners" do %>
+					<span>Партнерам</span>
+					<% end %></li>
+					<li class="<%= 'active' if current_page?(contacts_path) %>">
+					<%= link_to "contacts" do %>
+					<span>Контакты</span>
+					<% end %></li>
+				 	<div class="clear"></div>
+				 </ul>
+	          </div>
+	    </div>
+   </div>
+  
+
+<body>
 
 <%= yield %>
-
+	<div class="footer">
+		<div class="wrap">
+			<div class="footer-text">
+				
+				<ul class="follow_icon">
+					<li><a href="#" style="opacity: 1;"><%= image_tag("fb.png", :alt => "facebook") %></a></li>
+					<li><a href="#" style="opacity: 1;"><%= image_tag("tw.png", :alt => "twitter") %></a></li>
+					<li><a href="#" style="opacity: 1;"><%= image_tag("rss.png", :alt => "rss feed") %></a></li>
+					<li><a href="#" style="opacity: 1;"><%= image_tag("g+.png", :alt => "google+") %></a></li>
+					<li><a href="#" style="opacity: 1;"><%= image_tag("pin.png", :alt => "pinterest") %></a></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
 </body>
 </html>
