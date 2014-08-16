@@ -1,87 +1,24 @@
 <div class="main">
-	  <div class="products">
-			 <div class="top-box">
-				<h2>Products</h2>
-				<hr>
-				<p class="desc">Lorem ipsum dolor sit amet, consectetue</p>
-			 </div>
-			 <div class="padd">
+      <div class="products">
+             <div class="top-box">
+                <h2><%= image_tag("macadamia.png", :alt => "") %></h2>
+                <hr>
+             </div>
+             <div class="padd">
                 <div class="row">
                     <div class="span6 offset3">
-                        <h4 class="head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</h4>
-                    </div>
-                    <div class="clearfix"></div>
+                        <h4 class="head" style="text-align: center;">Профессиональная косметика для домашнего и салонного ухода. Вся продукция компании Macadamia Natural Oil содержит два самых дорогих и эффективных масла: Арганы и Макадамии и позиционируется, как профессиональный SPA-уход за волосами. Macadamia Natural Oil представлена более чем в 60 странах мира.</h4>
+                    </div>                    <div class="clearfix"></div>
                  </div>
             </div>
-		    <div class="section group">
-				<div class="col_1_of_4 span_1_of_4">
-					   <div class="list-box">
-                            <p class="numb">1.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">2.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">3.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">4.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			 <div class="section group">
-				<div class="col_1_of_4 span_1_of_4">
-					   <div class="list-box">
-                            <p class="numb">5.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">6.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">7.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="col_1_of_4 span_1_of_4">
-					 <div class="list-box">
-                            <p class="numb">8.</p>
-                            <h4>Nam liber tempor</h4>
-                            <p class="txt1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib</p>
-                            <p class="txt2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet Mauris fermentum dictum</p>
-                      </div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	 </div>
+            <div class="section group">
+                <% @products.each do |product| %> <div class="col_1_of_1 span_1_of_1">
+                    <div class="list-box"><div class="grid_img"> <%= image_tag(product.image_url, :class => "product_image") %> </div><h4><%= product.title %></h4> <p class='txt1'>
+                    <%= sanitize(product.description) %></p><p class='txt2'>Применение:<br><%= sanitize(product.description2) %></p> <div class="price_line"> 
+                    <span class="price"><%= product.price %></span> </div> </div>
+                </div><% end %>
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+     </div>
