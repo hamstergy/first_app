@@ -29,6 +29,9 @@ gem 'turbolinks'
 # Mobile. Read more: https://github.com/brendanlim/mobile-fu
 gem 'mobile-fu', '~> 1.3.1'
 
+# upload files
+gem 'paperclip', '~> 4.2.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 

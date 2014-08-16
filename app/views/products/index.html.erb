@@ -6,10 +6,9 @@
       <th>Title</th>
       <th>Description</th>
       <th>Description2</th>
-      <th>Image url</th>
-      <th>Price</th>
       <th>Available</th>
       <th>Category</th>
+      <th>Fullprice</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,10 +21,9 @@
         <td><%= product.title %></td>
         <td><%= product.description %></td>
         <td><%= product.description2 %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
         <td><%= product.available %></td>
         <td><%= product.category %></td>
+        <td><%= product.fullprice %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
