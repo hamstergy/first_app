@@ -1168,6 +1168,9 @@ background:#fff;
 display:none;
 padding: 10px;
 opacity: 0.8;
+-moz-border-radius:  10px;  /* Firefox */
+   -webkit-border-radius: 10px;  /* Safari/WebKit */
+           border-radius: 10px;  /* Opera; future browsers with CSS3 support */
 }
 #parent:hover #children {
 display:block;
@@ -1188,4 +1191,60 @@ display: block;
 .after_image {
 width: 75%;
 float: left;
+}
+
+.mainm{
+	padding:20px 10px;
+}
+/*--content--*/
+.top-boxm h2{
+	text-align: center;
+	color: #888;
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+hr {
+	border-bottom: 1px solid #CCC;
+	border-top: none;
+	margin: 0;
+	width:100%;
+	display: inline-block;
+	margin-top: -14px;
+	margin-bottom: 14px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.top-boxm{
+	text-align:center;
+	margin-bottom:20px;
+}
+.top-boxm p{
+	color: #999;
+	font-size: 0.8125em;
+	line-height: 1.5em;
+	margin: 0 auto;
+}
+.grid_imgm{
+	text-align:center;
+	margin-bottom: 4%;
+}
+/*  GRID OF FOUR   ============================================================================= */
+.col_1_of_4m{
+	display: block;
+}
+.span_1_of_4m {
+	margin-bottom: 20px;
+}
+.span_1_of_4m  h3 a{
+	color:#fff;
+	text-transform: uppercase;
+	font-size:1em;
+	line-height: 1.2;
+	font-weight : normal;
+	margin-top: 0px;
+	letter-spacing: -1px;
+}
+.span_1_of_4m h3 a:hover{
+	color:#E4E24F;
 }

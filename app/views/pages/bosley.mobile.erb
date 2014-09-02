@@ -1,6 +1,6 @@
-<div class="main">
+<div class="mainm">
 		<div class="products">
-			 <div class="top-box">
+			 <div class="top-boxm">
 				<h2><%= image_tag("bosley.png", :alt => "") %></h2>
 				<hr>
 			 </div>
@@ -13,8 +13,8 @@
                  </div>
             </div>
 		    <div class="section_group">
-				<% @products.each do |product| %> <div class="col_1_of_1 span_1_of_1">
-					<div class="list-box"><div class="grid_img"> <%= image_tag(product.photo.url, :class => "product_image_mob") %> </div><h4><%= product.title %></h4> <p class='txt1'>
+				<% @products.each do |product| %> <div class="col_1_of_4m span_1_of_4m">
+					<div class="list-box"><div class="grid_imgm"> <%= image_tag(product.image_url, :class => "product_image_mob") %> </div><h4><%= product.title %></h4> <p class='txt1'>
 					<%= sanitize(product.description) %></p><p class='txt2'>Применение:<br><%= sanitize(product.description2) %></p> <div class="price_line"> 
 					<span class="price"><%= simple_format product.fullprice %></span></div> </div>
 				</div><div class="clear"></div><% end %>
