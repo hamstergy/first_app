@@ -101,6 +101,27 @@ body{
 	padding: 10px 32px;
 	letter-spacing: 1px;
 }
+.cssmenu1{
+	text-align:center;
+	padding:0.1% 0 0.2%;
+}
+.cssmenu1 > ul > li {
+	display: inline-block;
+	position: relative;
+}
+.cssmenu1 > ul > li.active a, .cssmenu1 > ul > li a:hover {
+	color: #000;
+	background:#E4E24F;
+}
+.cssmenu1 > ul > li > a {
+	text-transform: uppercase;
+	font: normal 15px/30px PT Sans, sans-serif;
+	color: #FFF;
+	display: block;
+	line-height: 2em;
+	padding: 10px 12px;
+	letter-spacing: 1px;
+}
 .header{
 	background:-webkit-gradient(radial, center center, 0, center center, 300, from(#ffec00), to(#f4c300));
 	padding: 2% 0;
@@ -428,6 +449,9 @@ ul.follow_icon li {
 	float: left;
 	margin-right: 2%;
 }
+.about-img3 {
+	margin-right: 2%;
+}
 .about-desc {
 	width: 68%;
 	float: left;
@@ -438,9 +462,17 @@ ul.follow_icon li {
 	float: left;
 	margin-right: 0;
 }
+.about-desc2 {
+	width: 100%;
+	margin-right: 0;
+}
 .about-img1 {
 	width: 68%;
 	float: left;
+	margin-right: 2%;
+}
+.about-img2 {
+	width: 98%;
 	margin-right: 2%;
 }
 .about-desc p {
@@ -989,6 +1021,11 @@ p.txt2{
 		padding: 4px 10px;
 		line-height: 4.8em;
 	}
+	.cssmenu1 > ul > li > a {
+		font: normal 13px/30px PT Sans, sans-serif;
+		padding: 4px 10px;
+		line-height: 4.8em;
+	}
 	.top-box h2 {
 		font-size:2em;
 	}
@@ -1082,6 +1119,11 @@ p.txt2{
 		text-align: center;
 	}
 	.cssmenu > ul > li > a {
+		font: normal 13px/30px PT Sans, sans-serif;
+		padding: 0px 0px;
+		line-height: 2.8em;
+	}
+	.cssmenu1 > ul > li > a {
 		font: normal 13px/30px PT Sans, sans-serif;
 		padding: 0px 0px;
 		line-height: 2.8em;
@@ -1187,6 +1229,7 @@ opacity: 0.8;
 -moz-border-radius:  10px;  /* Firefox */
    -webkit-border-radius: 10px;  /* Safari/WebKit */
            border-radius: 10px;  /* Opera; future browsers with CSS3 support */
+		   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 #parent:hover #children {
 display:block;
