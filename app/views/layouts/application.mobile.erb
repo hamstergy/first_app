@@ -9,9 +9,8 @@
 <body>
 <% if current_page?(root_url)%>
 <% else %>
-
 <div class="header">	
-<div class="wrap"> 
+  <div class="wrap"> 
 	<div class="header-top">
 		 <div class="logo">
 			 <h1><%= link_to "/" do %><%= image_tag("yellowlogo.png", :alt => "Вернуться на главную") %><% end %></h1>
@@ -23,13 +22,15 @@
 		</div>
 		 <div class="clear"></div> 
 	   </div>
-	</div>
+   </div>	
 </div>
 <% end %>
       <!------ Slider ------------>
+
    <div class="banner">
    			<div class="drp-dwn">
 			 	<select onchange="window.location=this.options[this.selectedIndex].value">
+			 		<option value="/">Меню</option>
 					<option value="partners">Партнерам</option>
 					<option value="contacts">Контакты</option>
 				 </select>
@@ -39,12 +40,14 @@
 
 <%= yield %>
 	<div class="footer">
+		<div class="wrap">
 			<div class="footer-text">
 				
 				<ul class="follow_icon">
 					<li><a href="http://instagram.com/yellow_kz" style="opacity: 1;"><%= image_tag("rss.png", :alt => "rss feed") %></a></li>
 				</ul>
 			</div>	
+		</div>
 	</div>
 </body>
 </html>
