@@ -29,14 +29,22 @@
       <!------ Slider ------------>
 
    <div class="banner">
-   			<div class="drp-dwn">
-			 	<select onchange="window.location=this.options[this.selectedIndex].value">
-			 		<option value="/">Меню</option>
-					<option value="partners">Партнерам</option>
-					<option value="contacts">Контакты</option>
-				 </select>
-			</div>
+      <div class="wrap">
+		   <div class="cssmenu">
+				<ul>
+				   <li class="<%= 'active' if current_page?(partners_path) %>">
+					<%= link_to "partners" do %>
+					<span>Партнерам</span>
+					<% end %></li>
+					<li class="<%= 'active' if current_page?(contacts_path) %>">
+					<%= link_to "contacts" do %>
+					<span>Контакты</span>
+					<% end %></li>
+				 	<div class="clear"></div>
+				 </ul>
+	          </div>
 	    </div>
+   </div>
 
 
 <%= yield %>
