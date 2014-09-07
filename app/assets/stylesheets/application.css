@@ -1215,8 +1215,57 @@ p.txt2{
 		margin-left: -3px;
 	}
 }
-#parent{
+#parent1{
 position:relative;
+background: url(/assets/lundenilona.png) no-repeat;
+background-size: 100%;
+}
+#parent1:hover #children {
+display:block;
+}
+#parent1:hover{
+position:relative;
+background: url(/assets/lundenilonacolor.png) no-repeat;
+background-size: 100%;
+}
+#parent2{
+position:relative;
+background: url(/assets/bosley.png) no-repeat;
+background-size: 100%;
+}
+#parent2:hover #children {
+display:block;
+}
+#parent2:hover{
+position:relative;
+background: url(/assets/bosleycolor.png) no-repeat;
+background-size: 100%;
+}
+#parent3{
+position:relative;
+background: url(/assets/sexyhair.png) no-repeat;
+background-size: 100%;
+}
+#parent3:hover #children {
+display:block;
+}
+#parent3:hover{
+position:relative;
+background: url(/assets/sexyhaircolor.png) no-repeat;
+background-size: 100%;
+}
+#parent4{
+position:relative;
+background: url(/assets/macadamia.png) no-repeat;
+background-size: 100%;
+}
+#parent4:hover #children {
+display:block;
+}
+#parent4:hover{
+position:relative;
+background: url(/assets/macadamiacolor.png) no-repeat;
+background-size: 100%;
 }
 #children {
 z-index: 9999;
@@ -1231,9 +1280,7 @@ opacity: 0.8;
            border-radius: 10px;  /* Opera; future browsers with CSS3 support */
 		   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-#parent:hover #children {
-display:block;
-}
+
 .product_image {
   width: 200px;
 height: 200px;
