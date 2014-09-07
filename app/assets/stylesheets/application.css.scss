@@ -1230,7 +1230,7 @@ background-size: 100%;
 }
 #parent2{
 position:relative;
-background: asset-url("bosley.png", image) no-repeat;
+background-image: asset-data-url("bosley.png");
 background-size: 100%;
 }
 #parent2:hover #children {
@@ -1238,7 +1238,7 @@ display:block;
 }
 #parent2:hover{
 position:relative;
-background: asset-url("bosleycolor.png", image) no-repeat;
+background-image: asset-data-url("bosleycolor.png");
 background-size: 100%;
 }
 #parent3{
