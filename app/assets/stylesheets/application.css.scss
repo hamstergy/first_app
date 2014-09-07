@@ -1217,7 +1217,7 @@ p.txt2{
 }
 #parent1{
 position:relative;
-background: asset-url("lundenilona.png", image) no-repeat;
+background: url(image-path('lundenilona.png')) no-repeat;
 background-size: 100%;
 }
 #parent1:hover #children {
@@ -1225,7 +1225,7 @@ display:block;
 }
 #parent1:hover{
 position:relative;
-background: asset-url("lundenilonacolor.png", image) no-repeat;
+background: url(image-path('lundenilonacolor.png')) no-repeat;
 background-size: 100%;
 }
 #parent2{
