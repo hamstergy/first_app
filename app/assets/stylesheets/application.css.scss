@@ -1217,7 +1217,7 @@ p.txt2{
 }
 #parent1{
 position:relative;
-background: url(image-path('lundenilona.png')) no-repeat;
+background-image: asset-data-url("lundenilona.png");
 background-size: 100%;
 }
 #parent1:hover #children {
@@ -1225,7 +1225,7 @@ display:block;
 }
 #parent1:hover{
 position:relative;
-background: url(image-path('lundenilonacolor.png')) no-repeat;
+background-image: asset-data-url("lundenilonacolor.png");
 background-size: 100%;
 }
 #parent2{
@@ -1243,7 +1243,7 @@ background-size: 100%;
 }
 #parent3{
 position:relative;
-background: asset-url("sexyhair.png", image) no-repeat;
+background-image: asset-data-url("sexyhair.png");
 background-size: 100%;
 }
 #parent3:hover #children {
@@ -1251,12 +1251,12 @@ display:block;
 }
 #parent3:hover{
 position:relative;
-background: asset-url("sexyhaircolor.png", image) no-repeat;
+background-image: asset-data-url("sexyhaircolor.png");
 background-size: 100%;
 }
 #parent4{
 position:relative;
-background: asset-url("macadamia.png", image) no-repeat;
+background-image: asset-data-url("macadamia.png");
 background-size: 100%;
 }
 #parent4:hover #children {
@@ -1264,7 +1264,7 @@ display:block;
 }
 #parent4:hover{
 position:relative;
-background: asset-url("macadamiacolor.png", image) no-repeat;
+background-image: asset-data-url("macadamiacolor.png");
 background-size: 100%;
 }
 #children {
