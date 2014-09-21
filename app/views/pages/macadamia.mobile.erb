@@ -14,7 +14,10 @@
             <div class="section group">
                 <% @products.each do |product| %> <div class="col_1_of_1m span_1_of_1m">
                     <div class="list-box"><div class="grid_imgm"> <%= image_tag(product.image_url, :class => "product_image_mob") %> </div><h4><%= product.title %></h4> <p class='txt1'>
-                    <%= sanitize(product.description) %></p><p class='txt2'>Применение:<br><%= sanitize(product.description2) %></p> <div class="price_line"> 
+                    <%= sanitize(product.description) %></p>
+<% if product.description2.blank? %><b style="font-size: 12px;">Применение:</b><% else %><% end %>
+                    <p class='txt2'><%= sanitize(product.description2) %></p> <div class="price_line">
+                    <b style="font-size: 12px;">Цена:</b> 
                     <span class="price"><%= simple_format product.fullprice %></span> </div> </div>
                 </div><div class="clear"></div><% end %>
                 

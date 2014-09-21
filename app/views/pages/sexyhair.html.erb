@@ -16,7 +16,10 @@
 		    <div class="padd">
 				<% @products.each do |product| %> <div class="col_1_of_1 span_1_of_1">
 					<div class="list-box"><div class="grid_img"> <%= image_tag(product.image_url, :class => "product_image") %> </div><div class="after_image"><h4><%= product.title %></h4> <p class='txt1'>
-					<%= sanitize(product.description) %></p><p class='txt2'>Применение:<br><%= sanitize(product.description2) %></p> <div class="price_line"> 
+					<%= sanitize(product.description) %></p>
+<% if product.description2.blank? %><b style="font-size: 12px;">Применение:</b><% else %><% end %>
+					<p class='txt2'><%= sanitize(product.description2) %></p> <div class="price_line">
+					<b style="font-size: 12px;">Цена:</b> 
 					<span class="price"><%= simple_format product.fullprice %></span>  </div></div></div>
 				</div><div class="clear"></div><% end %>
 				
